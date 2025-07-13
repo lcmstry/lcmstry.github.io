@@ -59,14 +59,14 @@ EMANG GABISA BUAT SENDIRI YA? JADI HARUS COPY AWOKAWOKAWOK -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="flex items-center gap-3 text-2xl font-bold font-fira text-cyan-400 hover:text-cyan-300 transition-colors">
-                <img src="img/IC.png" alt="Logo Kelas" class="h-9 w-9 rounded-lg">
+                <img src="img/IC.png" onerror="this.onerror=null;this.src='https://placehold.co/100x100/0d1117/22d3ee?text=IC';" alt="Logo Kelas" class="h-9 w-9 rounded-lg">
                 <span>ICHEMISTRY</span>
             </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#jadwal" class="nav-link text-slate-300 hover:text-cyan-400 transition-colors">Jadwal</a>
                 <a href="#anggota" class="nav-link text-slate-300 hover:text-cyan-400 transition-colors">Anggota</a>
                 <a href="#galeri" class="nav-link text-slate-300 hover:text-cyan-400 transition-colors">Galeri</a>
-                <a href="#tugas" class="nav-link text-slate-300 hover:text-cyan-400 transition-colors">Tugas</a>
+                <a href="#tugas" class="nav-link text-slate-300 hover:text-cyan-400 transition-colors">Proyek</a>
             </div>
              <button id="mobile-menu-button" class="md:hidden text-slate-300 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -76,7 +76,7 @@ EMANG GABISA BUAT SENDIRI YA? JADI HARUS COPY AWOKAWOKAWOK -->
             <a href="#jadwal" class="block py-2 px-4 text-sm text-slate-300 hover:bg-slate-700">Jadwal</a>
             <a href="#anggota" class="block py-2 px-4 text-sm text-slate-300 hover:bg-slate-700">Anggota</a>
             <a href="#galeri" class="block py-2 px-4 text-sm text-slate-300 hover:bg-slate-700">Galeri</a>
-            <a href="#tugas" class="block py-2 px-4 text-sm text-slate-300 hover:bg-slate-700">Tugas</a>
+            <a href="#tugas" class="block py-2 px-4 text-sm text-slate-300 hover:bg-slate-700">Proyek</a>
         </div>
     </header>
 
@@ -98,90 +98,22 @@ EMANG GABISA BUAT SENDIRI YA? JADI HARUS COPY AWOKAWOKAWOK -->
             <p class="text-center text-slate-400 mb-12">Jadwal Perkuliahan IC'24.</p>
             
             <div id="schedule-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-                </div>
+            </div>
         </section>
 
         <section id="anggota" class="py-20 min-h-screen">
-            <h2 class="text-3xl font-bold text-center text-white mb-2">Struktur <span class="text-cyan-400">Kelas 2IC</span></h2>
-            <p class="text-center text-slate-400 mb-12">Kenali teman-teman dan perangkat kelas 2IC.</p>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <script>
-                    const students = [
-                        { name: "Nabila Rizki Agnia", position: "Ketua Kelas" },
-                        { name: "Zovanda Putri Nazyra", position: "Wakil Ketua" },
-                        { name: "Dwina Berlieana", position: "Sekretaris" },
-                        { name: "Putri Afifah Khairunnisa", position: "Bendahara" },
-                        { name: "Dimas Yuda Pratama", position: "Anggota" },
-                        { name: "Ahmad Afan Saputra", position: "Anggota" },
-                        { name: "Alfaris Abiyyu Ramadhan", position: "Anggota" },
-                        { name: "Amelia Andina Putri", position: "Anggota" },
-                        { name: "Amira Lutfia Alkamila", position: "Anggota" },
-                        { name: "Brilia Fatihah", position: "Anggota" },
-                        { name: "Bunga Chesyaqilla Yandrina", position: "Anggota" },
-                        { name: "Dinda Septiasa", position: "Anggota" },
-                        { name: "Gilang Ferdinan", position: "Anggota" },
-                        { name: "Lulu Zakiyah", position: "Anggota" },
-                        { name: "M Rifky Alsyahputra", position: "Anggota" },
-                        { name: "M. Alif Rizkiano Mauliddin", position: "Anggota" },
-                        { name: "Natasya", position: "Anggota" },
-                        { name: "Nayla Siti Azzyza", position: "Anggota" },
-                        { name: "Nia Tripen Sella Manalu", position: "Anggota" },
-                        { name: "Raid Agasyah", position: "Anggota" },
-                        { name: "Risky Amelia", position: "Anggota" },
-                        { name: "Shandy Dwi Raka Putra", position: "Anggota" },
-                        { name: "Yulia Agustin", position: "Anggota" },
-                        { name: "Zahra Amelia", position: "Anggota" }
-                    ];
-
-                    students.forEach(student => {
-                        let jabatanColor = 'text-slate-400';
-                        if (student.position === 'Ketua Kelas') {
-                            jabatanColor = 'text-cyan-400 font-semibold';
-                        } else if (student.position === 'Wakil Ketua') {
-                            jabatanColor = 'text-sky-400 font-semibold';
-                        } else if (student.position === 'Sekretaris' || student.position === 'Bendahara') {
-                            jabatanColor = 'text-teal-400';
-                        }
-
-                        const initial = student.name.charAt(0);
-                        const placeholderUrl = `https://placehold.co/400x400/1f2937/c9d1d9?text=${initial}`;
-                        
-                        document.write(`
-                            <div class="text-center group">
-                                <img src="${placeholderUrl}" onerror="this.onerror=null;this.src='https://placehold.co/400x400/1f2937/c9d1d9?text=Err';" alt="Foto ${student.name}" class="w-full h-auto rounded-lg object-cover aspect-square mb-2 border-2 border-slate-700 group-hover:border-cyan-400 transition-all duration-300 transform group-hover:scale-105">
-                                <h3 class="font-semibold text-white leading-tight">${student.name}</h3>
-                                <p class="text-sm ${jabatanColor}">${student.position}</p>
-                            </div>
-                        `);
-                    });
-                </script>
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Struktur <span class="text-cyan-400">Kelas IC</span></h2>
+            <p class="text-center text-slate-400 mb-12">Kenali teman-teman dan perangkat kelas IC'24.</p>
+            <div id="anggota-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Daftar anggota akan di-generate oleh JavaScript -->
             </div>
         </section>
 
         <section id="galeri" class="py-20 min-h-screen">
             <h2 class="text-3xl font-bold text-center text-white mb-2">Galeri <span class="text-cyan-400">Kegiatan</span></h2>
             <p class="text-center text-slate-400 mb-12">IC'24 Moments</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <script>
-                    const galleryItems = [
-                        { title: "Praktikum di Lab", url: "https://placehold.co/600x400/0d1117/22d3ee?text=Praktikum+Lab" },
-                        { title: "Studi Banding", url: "https://placehold.co/600x400/0d1117/22d3ee?text=Studi+Banding" },
-                        { title: "Acara Kebersamaan", url: "https://placehold.co/600x400/0d1117/22d3ee?text=Kebersamaan" },
-                        { title: "Presentasi Proyek", url: "https://placehold.co/600x400/0d1117/22d3ee?text=Presentasi" },
-                        { title: "Juara Lomba Coding", url: "https://placehold.co/600x400/0d1117/22d3ee?text=Juara+Lomba" },
-                        { title: "Diskusi Kelompok", url: "https://placehold.co/600x400/0d1117/22d3ee?text=Diskusi" },
-                    ];
-                    galleryItems.forEach(item => {
-                        document.write(`
-                            <div class="relative overflow-hidden rounded-lg group">
-                                <img src="${item.url}" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d1117/c9d1d9?text=Image+Not+Found';" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-20 transition-all duration-300 flex items-end p-4">
-                                    <h3 class="text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${item.title}</h3>
-                                </div>
-                            </div>
-                        `);
-                    });
-                </script>
+            <div id="galeri-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Galeri akan di-generate oleh JavaScript -->
             </div>
         </section>
 
@@ -207,6 +139,7 @@ EMANG GABISA BUAT SENDIRI YA? JADI HARUS COPY AWOKAWOKAWOK -->
                         <span class="font-fira text-sm bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full">Coming Soon</span>
                     </div>
                 </div>
+            </div>
         </section>
 
     </main>
@@ -216,8 +149,8 @@ EMANG GABISA BUAT SENDIRI YA? JADI HARUS COPY AWOKAWOKAWOK -->
             <p>&copy; 2025 Kelas IC'24 - Manajemen Informatika.</p>
             <p>Politeknik Negeri Sriwijaya.</p>
             <div class="mt-4 flex justify-center space-x-6">
-                <a href="#" class="hover:text-cyan-400 transition-colors">Instagram</a>
-                <a href="#" class="hover:text-cyan-400 transition-colors">YouTube</a>
+                <a href="https://www.instagram.com/lchemistryy/" target="_blank" class="hover:text-cyan-400 transition-colors">Instagram</a>
+                <a href="https://www.youtube.com/@lchemistryy" target="_blank" class="hover:text-cyan-400 transition-colors">YouTube</a>
             </div>
         </div>
     </footer>
@@ -270,6 +203,84 @@ EMANG GABISA BUAT SENDIRI YA? JADI HARUS COPY AWOKAWOKAWOK -->
                 scheduleHTML += `</div></div>`;
             }
             scheduleContainer.innerHTML = scheduleHTML;
+        }
+
+        // --- Data dan Pembuatan Anggota ---
+        const anggotaGrid = document.getElementById('anggota-grid');
+        const students = [
+            // Ganti nama file 'nama.jpg' dengan nama file foto Anda di folder 'img'
+            { name: "Nabila Rizki Agnia", position: "Ketua Kelas", imageUrl: "img/nabila.jpg" },
+            { name: "Zovanda Putri Nazyra", position: "Wakil Ketua", imageUrl: "img/zovanda.jpg" },
+            { name: "Dwina Berlieana", position: "Sekretaris", imageUrl: "img/dwina.jpg" },
+            { name: "Putri Afifah Khairunnisa", position: "Bendahara", imageUrl: "img/putri.png" },
+            { name: "Dimas Yuda Pratama", position: "Anggota", imageUrl: "img/dimas.jpg" },
+            { name: "Ahmad Afan Saputra", position: "Anggota", imageUrl: "img/ahmad.jpg" },
+            { name: "Alfaris Abiyyu Ramadhan", position: "Anggota", imageUrl: "img/alfaris.jpg" },
+            { name: "Amelia Andina Putri", position: "Anggota", imageUrl: "img/amelia.jpg" },
+            { name: "Amira Lutfia Alkamila", position: "Anggota", imageUrl: "img/amira.jpg" },
+            { name: "Brilia Fatihah", position: "Anggota", imageUrl: "img/brilia.jpg" },
+            { name: "Bunga Chesyaqilla Yandrina", position: "Anggota", imageUrl: "img/bunga.jpg" },
+            { name: "Dinda Septiasa", position: "Anggota", imageUrl: "img/dinda.png" },
+            { name: "Gilang Ferdinan", position: "Anggota", imageUrl: "img/gilang.jpg" },
+            { name: "Lulu Zakiyah", position: "Anggota", imageUrl: "img/lulu.jpg" },
+            { name: "M Rifky Alsyahputra", position: "Anggota", imageUrl: "img/rifky.jpg" },
+            { name: "M. Alif Rizkiano Mauliddin", position: "Anggota", imageUrl: "img/alif.jpg" },
+            { name: "Natasya", position: "Anggota", imageUrl: "img/natasya.jpg" },
+            { name: "Nayla Siti Azzyza", position: "Anggota", imageUrl: "img/nayla.jpg" },
+            { name: "Nia Tripen Sella Manalu", position: "Anggota", imageUrl: "img/nia.jpg" },
+            { name: "Raid Agasyah", position: "Anggota", imageUrl: "img/raid.jpg" },
+            { name: "Risky Amelia", position: "Anggota", imageUrl: "img/risky.jpg" },
+            { name: "Shandy Dwi Raka Putra", position: "Anggota", imageUrl: "img/shandy.jpg" },
+            { name: "Yulia Agustin", position: "Anggota", imageUrl: "img/yulia.png" },
+            { name: "Zahra Amelia", position: "Anggota", imageUrl: "img/zahra.jpg" }
+        ];
+
+        if (anggotaGrid) {
+            let anggotaHTML = '';
+            students.forEach(student => {
+                let jabatanColor = 'text-slate-400';
+                if (student.position === 'Ketua Kelas') {
+                    jabatanColor = 'text-cyan-400 font-semibold';
+                } else if (student.position === 'Wakil Ketua') {
+                    jabatanColor = 'text-sky-400 font-semibold';
+                } else if (student.position === 'Sekretaris' || student.position === 'Bendahara') {
+                    jabatanColor = 'text-teal-400';
+                }
+                
+                anggotaHTML += `
+                    <div class="text-center group">
+                        <img src="${student.imageUrl}" onerror="this.onerror=null;this.src='https://placehold.co/400x400/1f2937/c9d1d9?text=${student.name.charAt(0)}';" alt="Foto ${student.name}" class="w-full h-auto rounded-lg object-cover aspect-square mb-2 border-2 border-slate-700 group-hover:border-cyan-400 transition-all duration-300 transform group-hover:scale-105">
+                        <h3 class="font-semibold text-white leading-tight">${student.name}</h3>
+                        <p class="text-sm ${jabatanColor}">${student.position}</p>
+                    </div>
+                `;
+            });
+            anggotaGrid.innerHTML = anggotaHTML;
+        }
+
+        // --- Data dan Pembuatan Galeri ---
+        const galeriGrid = document.getElementById('galeri-grid');
+        const galleryItems = [
+            { title: "Praktikum di Lab", url: "img/gallery1.jpg" },
+            { title: "Studi Banding", url: "img/gallery2.jpg" },
+            { title: "Acara Kebersamaan", url: "img/gallery3.jpg" },
+            { title: "Presentasi Proyek", url: "img/gallery4.jpg" },
+            { title: "Juara Lomba Coding", url: "img/gallery5.jpg" },
+            { title: "Diskusi Kelompok", url: "img/gallery6.jpg" },
+        ];
+        if(galeriGrid){
+            let galeriHTML = '';
+            galleryItems.forEach(item => {
+                galeriHTML += `
+                    <div class="relative overflow-hidden rounded-lg group">
+                        <img src="${item.url}" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d1117/c9d1d9?text=Image+Not+Found';" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-20 transition-all duration-300 flex items-end p-4">
+                            <h3 class="text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${item.title}</h3>
+                        </div>
+                    </div>
+                `;
+            });
+            galeriGrid.innerHTML = galeriHTML;
         }
 
 
