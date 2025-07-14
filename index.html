@@ -87,6 +87,11 @@ EMANG GABISA BUAT SENDIRI YA? JADI HARUS COPY AWOKAWOKAWOK -->
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Disable image interaction */
+        img {
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="relative">
@@ -453,7 +458,11 @@ EMANG GABISA BUAT SENDIRI YA? JADI HARUS COPY AWOKAWOKAWOK -->
                 mobileMenu.classList.add('hidden');
              }
         });
+
+        // --- Disable Right Click ---
+        document.addEventListener('contextmenu', event => event.preventDefault());
     });
     </script>
 </body>
 </html>
+git
